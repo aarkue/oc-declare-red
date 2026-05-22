@@ -1,0 +1,184 @@
+[
+  {
+    "from": "confirm order",
+    "to": "pay order",
+    "arc_type": "EF",
+    "counts": [
+      1,
+      null
+    ],
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "orders"
+        }
+      ],
+      "any": [],
+      "all": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ]
+    }
+  },
+  {
+    "from": "pick item",
+    "to": "create package",
+    "arc_type": "EF",
+    "counts": [
+      1,
+      null
+    ],
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "any": [],
+      "all": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        }
+      ]
+    }
+  },
+  {
+    "from": "place order",
+    "to": "pick item",
+    "arc_type": "AS",
+    "counts": [
+      1,
+      null
+    ],
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        }
+      ],
+      "all": []
+    }
+  },
+  {
+    "from": "confirm order",
+    "to": "create package",
+    "arc_type": "EF",
+    "counts": [
+      1,
+      null
+    ],
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "any": [],
+      "all": []
+    }
+  },
+  {
+    "from": "place order",
+    "to": "confirm order",
+    "arc_type": "EF",
+    "counts": [
+      1,
+      null
+    ],
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "orders"
+        }
+      ],
+      "any": [],
+      "all": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ]
+    }
+  },
+  {
+    "from": "place order",
+    "to": "pay order",
+    "arc_type": "EF",
+    "counts": [
+      1,
+      null
+    ],
+    "label": {
+      "all": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "any": [],
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "orders"
+        }
+      ]
+    }
+  },
+  {
+    "from": "place order",
+    "to": "create package",
+    "arc_type": "AS",
+    "counts": [
+      1,
+      null
+    ],
+    "label": {
+      "all": [],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        }
+      ],
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ]
+    }
+  },
+  {
+    "from": "confirm order",
+    "to": "pick item",
+    "arc_type": "EF",
+    "counts": [
+      1,
+      null
+    ],
+    "label": {
+      "all": [],
+      "any": [],
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,3 @@
+[workspace]
+members = ["oc-declare", "cli", "wasm"]
+resolver = "2"

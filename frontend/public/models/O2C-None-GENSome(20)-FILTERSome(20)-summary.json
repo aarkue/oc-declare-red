@@ -1,0 +1,51 @@
+{
+  "discovery_durations_seconds": [
+    0.108200231,
+    0.096922868,
+    0.10513351,
+    0.108448529,
+    0.110521907,
+    0.105155143,
+    0.104154695,
+    0.100942816,
+    0.1094016,
+    0.096858765
+  ],
+  "mean_discovery_duration": 0.10457400639999999,
+  "number_of_discovered_results": 72,
+  "reduction_duration_seconds": [
+    0.00014237,
+    0.000146274,
+    0.000139925,
+    0.000156117,
+    0.000147326,
+    0.000157269,
+    0.000143777,
+    0.000149765,
+    0.000145293,
+    0.000150511
+  ],
+  "mean_reduction_duration": 0.00014786270000000004,
+  "number_of_results_after_reduction": 25,
+  "lossy_reduction_duration_seconds": [],
+  "mean_lossy_reduction_duration": null,
+  "number_of_results_after_lossy_reduction": 0,
+  "refinement_duration_seconds": [
+    0.042001561,
+    0.040945629,
+    0.042225388,
+    0.041270807,
+    0.04274666,
+    0.040703227,
+    0.043261341,
+    0.037650713,
+    0.046206991,
+    0.041292062
+  ],
+  "mean_refinement_duration": 0.0418304379,
+  "number_of_results_after_refinement": 25,
+  "num_events": 21008,
+  "num_objects": 10840,
+  "num_event_types": 11,
+  "num_object_types": 6
+}

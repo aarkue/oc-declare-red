@@ -1,0 +1,85 @@
+/* OC-DECLARE Viz — self-contained component styles */
+
+.oc-declare-viz {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.oc-declare-viz .oc-declare-flow {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Activity node */
+.oc-declare-node {
+  box-sizing: border-box;
+  width: 130px;
+  height: 55px;
+  background: white;
+  border: 2px solid #d1d5db;
+  border-radius: 10px;
+  padding: 5px 8px;
+  text-align: center;
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.15s, box-shadow 0.15s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: visible;
+}
+
+.oc-declare-node:hover,
+.oc-declare-node[data-selected] {
+  border-color: #6366f1;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.15);
+}
+
+.oc-declare-node-label {
+  font-size: 15px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 500;
+  color: #1f2937;
+  margin-bottom: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.oc-declare-node-dots {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Connection handle dots — subtle, appear more clearly on node hover */
+.oc-declare-handle.react-flow__handle {
+  width: 10px !important;
+  height: 10px !important;
+  min-width: 10px !important;
+  min-height: 10px !important;
+  background: rgba(0, 0, 0, 0.08) !important;
+  border: 2px solid rgba(255, 255, 255, 0.9) !important;
+  border-radius: 50% !important;
+  opacity: 0;
+  pointer-events: auto !important;
+  cursor: crosshair !important;
+  z-index: 10 !important;
+  transition: opacity 0.15s, background 0.15s;
+}
+
+.oc-declare-node:hover .oc-declare-handle.react-flow__handle {
+  opacity: 1;
+}
+
+.oc-declare-handle.react-flow__handle:hover {
+  background: rgba(99, 102, 241, 0.5) !important;
+  opacity: 1 !important;
+}
