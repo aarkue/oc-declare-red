@@ -186,10 +186,39 @@
       "each": [
         {
           "type": "Simple",
+          "object_type": "Container"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
           "object_type": "Transport Document"
         }
       ],
-      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Depart",
+    "to": "Order Empty Containers",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Transport Document"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "Container"
+        }
+      ],
       "all": []
     },
     "counts": [

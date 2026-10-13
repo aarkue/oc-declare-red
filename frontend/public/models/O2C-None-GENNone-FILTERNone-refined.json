@@ -1,8 +1,8 @@
 [
   {
-    "from": "pay order",
+    "from": "place order",
     "to": "pick item",
-    "arc_type": "AS",
+    "arc_type": "EF",
     "label": {
       "each": [
         {
@@ -24,9 +24,9 @@
     ]
   },
   {
-    "from": "pay order",
+    "from": "place order",
     "to": "pick item",
-    "arc_type": "AS",
+    "arc_type": "EF",
     "label": {
       "each": [
         {
@@ -48,44 +48,22 @@
     ]
   },
   {
-    "from": "create package",
-    "to": "reorder item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "employees"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "failed delivery",
+    "from": "send package",
     "to": "package delivered",
     "arc_type": "EF",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "employees"
-        },
-        {
-          "type": "Simple",
           "object_type": "packages"
         }
       ],
-      "any": [],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        }
+      ],
       "all": [
         {
           "type": "Simple",
@@ -104,106 +82,17 @@
   },
   {
     "from": "package delivered",
-    "to": "confirm order",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "package delivered",
-    "to": "confirm order",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "failed delivery",
-    "to": "send package",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "employees"
-        },
-        {
-          "type": "Simple",
-          "object_type": "packages"
-        }
-      ],
-      "any": [],
-      "all": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ]
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "confirm order",
-    "to": "pay order",
+    "to": "reorder item",
     "arc_type": "EF",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "orders"
+          "object_type": "products"
         }
       ],
       "any": [],
-      "all": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ]
+      "all": []
     },
     "counts": [
       1,
@@ -211,22 +100,21 @@
     ]
   },
   {
-    "from": "failed delivery",
+    "from": "reorder item",
     "to": "pick item",
-    "arc_type": "EP",
+    "arc_type": "EF",
     "label": {
       "each": [
         {
           "type": "Simple",
           "object_type": "items"
-        }
-      ],
-      "any": [
+        },
         {
           "type": "Simple",
           "object_type": "products"
         }
       ],
+      "any": [],
       "all": []
     },
     "counts": [
@@ -235,124 +123,8 @@
     ]
   },
   {
-    "from": "failed delivery",
+    "from": "reorder item",
     "to": "pick item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "pick item",
-    "to": "create package",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "pick item",
-    "to": "place order",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "reorder item",
-    "to": "confirm order",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "reorder item",
-    "to": "create package",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "employees"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "reorder item",
-    "to": "create package",
     "arc_type": "EP",
     "label": {
       "each": [
@@ -393,9 +165,9 @@
     ]
   },
   {
-    "from": "confirm order",
-    "to": "pick item",
-    "arc_type": "AS",
+    "from": "payment reminder",
+    "to": "package delivered",
+    "arc_type": "EP",
     "label": {
       "each": [
         {
@@ -417,9 +189,321 @@
     ]
   },
   {
-    "from": "confirm order",
+    "from": "payment reminder",
+    "to": "package delivered",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "reorder item",
+    "to": "create package",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "reorder item",
+    "to": "create package",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "reorder item",
+    "to": "item out of stock",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "reorder item",
+    "to": "item out of stock",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "reorder item",
+    "to": "item out of stock",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "package delivered",
+    "to": "send package",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        },
+        {
+          "type": "Simple",
+          "object_type": "packages"
+        }
+      ],
+      "any": [],
+      "all": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ]
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "reorder item",
+    "to": "send package",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "reorder item",
+    "to": "send package",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "create package",
     "to": "pick item",
-    "arc_type": "AS",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "create package",
+    "to": "pick item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "create package",
+    "to": "pick item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "failed delivery",
+    "to": "confirm order",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "failed delivery",
+    "to": "confirm order",
+    "arc_type": "EP",
     "label": {
       "each": [
         {
@@ -442,6 +526,273 @@
   },
   {
     "from": "package delivered",
+    "to": "confirm order",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "package delivered",
+    "to": "confirm order",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "pick item",
+    "to": "reorder item",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "pick item",
+    "to": "reorder item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "confirm order",
+    "to": "pay order",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "orders"
+        }
+      ],
+      "any": [],
+      "all": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ]
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "payment reminder",
+    "to": "confirm order",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "orders"
+        }
+      ],
+      "any": [],
+      "all": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ]
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "item out of stock",
+    "to": "reorder item",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "item out of stock",
+    "to": "reorder item",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "item out of stock",
+    "to": "reorder item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "payment reminder",
+    "to": "pick item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "payment reminder",
+    "to": "pick item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "failed delivery",
     "to": "send package",
     "arc_type": "EP",
     "label": {
@@ -505,9 +856,9 @@
     ]
   },
   {
-    "from": "item out of stock",
-    "to": "pay order",
-    "arc_type": "EF",
+    "from": "pick item",
+    "to": "place order",
+    "arc_type": "EP",
     "label": {
       "each": [
         {
@@ -520,73 +871,6 @@
         }
       ],
       "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "place order",
-    "to": "package delivered",
-    "arc_type": "EP",
-    "label": {
-      "each": [],
-      "any": [],
-      "all": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ]
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "failed delivery",
-    "to": "confirm order",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "failed delivery",
-    "to": "confirm order",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
       "all": []
     },
     "counts": [
@@ -618,6 +902,533 @@
     ]
   },
   {
+    "from": "create package",
+    "to": "confirm order",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "place order",
+    "to": "package delivered",
+    "arc_type": "EP",
+    "label": {
+      "each": [],
+      "any": [],
+      "all": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ]
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "failed delivery",
+    "to": "package delivered",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        },
+        {
+          "type": "Simple",
+          "object_type": "packages"
+        }
+      ],
+      "any": [],
+      "all": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ]
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "place order",
+    "to": "failed delivery",
+    "arc_type": "AS",
+    "label": {
+      "each": [],
+      "any": [],
+      "all": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ]
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "create package",
+    "to": "send package",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "packages"
+        }
+      ],
+      "any": [],
+      "all": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ]
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "send package",
+    "to": "confirm order",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "send package",
+    "to": "confirm order",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "pick item",
+    "to": "create package",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "confirm order",
+    "to": "create package",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "confirm order",
+    "to": "create package",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "send package",
+    "to": "pick item",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "send package",
+    "to": "pick item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "send package",
+    "to": "pick item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "send package",
+    "to": "pick item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "package delivered",
+    "to": "pick item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "package delivered",
+    "to": "pick item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "pay order",
+    "to": "pick item",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "pay order",
+    "to": "pick item",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "failed delivery",
+    "to": "pick item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "failed delivery",
+    "to": "pick item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "items"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "package delivered",
+    "to": "failed delivery",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "package delivered",
+    "to": "failed delivery",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "employees"
+        },
+        {
+          "type": "Simple",
+          "object_type": "products"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
     "from": "payment reminder",
     "to": "pay order",
     "arc_type": "EF",
@@ -647,36 +1458,13 @@
   },
   {
     "from": "reorder item",
-    "to": "pick item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "reorder item",
-    "to": "pick item",
+    "to": "confirm order",
     "arc_type": "EP",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "employees"
+          "object_type": "items"
         },
         {
           "type": "Simple",
@@ -693,105 +1481,6 @@
   },
   {
     "from": "create package",
-    "to": "send package",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "packages"
-        }
-      ],
-      "any": [],
-      "all": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ]
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "payment reminder",
-    "to": "pick item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "payment reminder",
-    "to": "pick item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "pick item",
-    "to": "reorder item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "employees"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "pick item",
     "to": "reorder item",
     "arc_type": "EP",
     "label": {
@@ -814,113 +1503,9 @@
     ]
   },
   {
-    "from": "send package",
-    "to": "package delivered",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "packages"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "employees"
-        }
-      ],
-      "all": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ]
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "create package",
-    "to": "pick item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "employees"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "create package",
-    "to": "pick item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "create package",
-    "to": "pick item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
     "from": "confirm order",
-    "to": "create package",
-    "arc_type": "EF",
+    "to": "pick item",
+    "arc_type": "AS",
     "label": {
       "each": [
         {
@@ -943,8 +1528,8 @@
   },
   {
     "from": "confirm order",
-    "to": "create package",
-    "arc_type": "EF",
+    "to": "pick item",
+    "arc_type": "AS",
     "label": {
       "each": [
         {
@@ -966,45 +1551,7 @@
     ]
   },
   {
-    "from": "send package",
-    "to": "payment reminder",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "send package",
-    "to": "payment reminder",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "payment reminder",
+    "from": "pay order",
     "to": "confirm order",
     "arc_type": "EP",
     "label": {
@@ -1025,218 +1572,6 @@
           "object_type": "products"
         }
       ]
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "payment reminder",
-    "to": "package delivered",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "payment reminder",
-    "to": "package delivered",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "create package",
-    "to": "confirm order",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "package delivered",
-    "to": "pick item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "package delivered",
-    "to": "pick item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "reorder item",
-    "to": "send package",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "employees"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "reorder item",
-    "to": "send package",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "employees"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "package delivered",
-    "to": "failed delivery",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "employees"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "package delivered",
-    "to": "failed delivery",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "employees"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
     },
     "counts": [
       1,
@@ -1277,30 +1612,7 @@
   },
   {
     "from": "item out of stock",
-    "to": "reorder item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "employees"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "item out of stock",
-    "to": "reorder item",
+    "to": "pay order",
     "arc_type": "EF",
     "label": {
       "each": [
@@ -1308,308 +1620,6 @@
           "type": "Simple",
           "object_type": "items"
         },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "item out of stock",
-    "to": "reorder item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "employees"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "reorder item",
-    "to": "item out of stock",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "employees"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "reorder item",
-    "to": "item out of stock",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "employees"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "reorder item",
-    "to": "item out of stock",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "pay order",
-    "to": "confirm order",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "orders"
-        }
-      ],
-      "any": [],
-      "all": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        },
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ]
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "place order",
-    "to": "failed delivery",
-    "arc_type": "AS",
-    "label": {
-      "each": [],
-      "any": [],
-      "all": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ]
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "place order",
-    "to": "pick item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "place order",
-    "to": "pick item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "send package",
-    "to": "pick item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "employees"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "send package",
-    "to": "pick item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "send package",
-    "to": "pick item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "employees"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "send package",
-    "to": "pick item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "products"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "package delivered",
-    "to": "reorder item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
         {
           "type": "Simple",
           "object_type": "products"
@@ -1653,21 +1663,16 @@
   },
   {
     "from": "send package",
-    "to": "confirm order",
-    "arc_type": "EP",
+    "to": "payment reminder",
+    "arc_type": "EF",
     "label": {
       "each": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
-      "any": [
         {
           "type": "Simple",
           "object_type": "products"
         }
       ],
+      "any": [],
       "all": []
     },
     "counts": [
@@ -1677,7 +1682,7 @@
   },
   {
     "from": "send package",
-    "to": "confirm order",
+    "to": "payment reminder",
     "arc_type": "EP",
     "label": {
       "each": [
@@ -1686,12 +1691,7 @@
           "object_type": "products"
         }
       ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "items"
-        }
-      ],
+      "any": [],
       "all": []
     },
     "counts": [

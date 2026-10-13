@@ -8357,7 +8357,7 @@
   },
   {
     "from": "Release Type 18",
-    "to": "request for information: Software",
+    "to": "request for information: Referred",
     "arc_type": "EF",
     "label": {
       "each": [
@@ -9252,6 +9252,25 @@
     "from": "Service Change",
     "to": "Resolved",
     "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Service Change",
+    "to": "Status Change",
+    "arc_type": "EF",
     "label": {
       "each": [
         {
@@ -14809,6 +14828,29 @@
     ]
   },
   {
+    "from": "Standard Change Type 114",
+    "to": "request for information: User error",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
     "from": "Standard Change Type 115",
     "to": "Release Type 09",
     "arc_type": "EF",
@@ -19209,6 +19251,29 @@
   },
   {
     "from": "Standard Change Type 155",
+    "to": "request for information: Operator error",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Standard Change Type 155",
     "to": "request for information: Unknown",
     "arc_type": "EF",
     "label": {
@@ -19234,6 +19299,29 @@
     "from": "Standard Change Type 155",
     "to": "request for information: Unknown",
     "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Standard Change Type 155",
+    "to": "request for information: User error",
+    "arc_type": "EF",
     "label": {
       "each": [
         {
@@ -29023,6 +29111,25 @@
   },
   {
     "from": "Update",
+    "to": "Operator Update",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Update",
     "to": "Reassignment",
     "arc_type": "EP",
     "label": {
@@ -30524,6 +30631,68 @@
   },
   {
     "from": "alert stage 1",
+    "to": "alert stage 1",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Case_R"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Interaction"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "alert stage 1",
+    "to": "alert stage 1",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Case_R"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Interaction"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "alert stage 1",
     "to": "incident: Data",
     "arc_type": "EP",
     "label": {
@@ -30742,10 +30911,83 @@
   },
   {
     "from": "complaint: Kwaliteit van de output",
-    "to": "Open",
+    "to": "Assignment",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Kwaliteit van de output",
+    "to": "Closed",
     "arc_type": "EF",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Kwaliteit van de output",
+    "to": "Description Update",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Kwaliteit van de output",
+    "to": "Operator Update",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
         {
           "type": "Simple",
           "object_type": "KM"
@@ -30801,6 +31043,25 @@
     "from": "complaint: Kwaliteit van de output",
     "to": "complaint: Overig",
     "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Managen van verwachtingen",
+    "to": "Closed",
+    "arc_type": "EP",
     "label": {
       "each": [
         {
@@ -30933,6 +31194,48 @@
   },
   {
     "from": "complaint: Overig",
+    "to": "Caused By CI",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Overig",
+    "to": "Problem Closure",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Overig",
     "to": "Standard Change Type 148",
     "arc_type": "EP",
     "label": {
@@ -30940,6 +31243,71 @@
         {
           "type": "Simple",
           "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Overig",
+    "to": "Update",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Overig",
+    "to": "Update from customer",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Overig",
+    "to": "alert stage 1",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         }
       ],
       "any": [],
@@ -30989,6 +31357,10 @@
         },
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "KM"
         },
         {
@@ -31013,6 +31385,10 @@
         {
           "type": "Simple",
           "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
@@ -31093,6 +31469,10 @@
         },
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "ServiceComponent"
         }
       ],
@@ -31113,6 +31493,118 @@
         {
           "type": "Simple",
           "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Overig",
+    "to": "incident: Operator error",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Overig",
+    "to": "incident: User manual not used",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Overig",
+    "to": "incident: User manual not used",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Overig",
+    "to": "request for information: Data",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
@@ -31139,6 +31631,118 @@
         },
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Overig",
+    "to": "request for information: Questions",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Overig",
+    "to": "request for information: Questions",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Overig",
+    "to": "request for information: Referred",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Overig",
+    "to": "request for information: Software",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "ServiceComponent"
         }
       ],
@@ -31162,6 +31766,37 @@
         },
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Overig",
+    "to": "request for information: User error",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "ServiceComponent"
         }
       ],
@@ -31176,12 +31811,16 @@
   {
     "from": "complaint: Overig",
     "to": "request for information: User manual not used",
-    "arc_type": "EP",
+    "arc_type": "EF",
     "label": {
       "each": [
         {
           "type": "Simple",
           "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
@@ -31340,10 +31979,60 @@
   },
   {
     "from": "incident: Data",
-    "to": "Open",
-    "arc_type": "EF",
+    "to": "Caused By CI",
+    "arc_type": "AS",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Data",
+    "to": "Caused By CI",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Interaction"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Data",
+    "to": "Open",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Interaction"
+        },
         {
           "type": "Simple",
           "object_type": "KM"
@@ -31432,6 +32121,29 @@
   },
   {
     "from": "incident: Hardware",
+    "to": "Assignment",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Hardware",
     "to": "Description Update",
     "arc_type": "EF",
     "label": {
@@ -31471,9 +32183,17 @@
   {
     "from": "incident: Hardware",
     "to": "Open",
-    "arc_type": "EF",
+    "arc_type": "AS",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Interaction"
+        },
         {
           "type": "Simple",
           "object_type": "KM"
@@ -31493,6 +32213,48 @@
     "arc_type": "AS",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Hardware",
+    "to": "Pending vendor",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Hardware",
+    "to": "Status Change",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
         {
           "type": "Simple",
           "object_type": "KM"
@@ -32150,13 +32912,82 @@
   },
   {
     "from": "incident: No error - works as designed",
-    "to": "Open",
+    "to": "Assignment",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: No error - works as designed",
+    "to": "Caused By CI",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: No error - works as designed",
+    "to": "Closed",
     "arc_type": "EF",
     "label": {
       "each": [
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: No error - works as designed",
+    "to": "Operator Update",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         }
       ],
       "any": [],
@@ -32223,10 +33054,56 @@
   },
   {
     "from": "incident: Operator error",
-    "to": "Open",
+    "to": "Caused By CI",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Operator error",
+    "to": "Closed",
     "arc_type": "EF",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Operator error",
+    "to": "Open",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
         {
           "type": "Simple",
           "object_type": "KM"
@@ -32319,13 +33196,234 @@
   },
   {
     "from": "incident: Other",
-    "to": "Operator Update",
+    "to": "Assignment",
     "arc_type": "EP",
     "label": {
       "each": [
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Other",
+    "to": "Caused By CI",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Other",
+    "to": "Communication with customer",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Other",
+    "to": "Description Update",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Other",
+    "to": "External Vendor Assignment",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Other",
+    "to": "Mail to Customer",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Other",
+    "to": "Quality Indicator",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Other",
+    "to": "Quality Indicator Fixed",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Other",
+    "to": "Reassignment",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Other",
+    "to": "Reopen",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Other",
+    "to": "Update",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Other",
+    "to": "Update from customer",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         }
       ],
       "any": [],
@@ -32465,6 +33563,25 @@
   },
   {
     "from": "incident: Overig",
+    "to": "Closed",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Overig",
     "to": "Communication with customer",
     "arc_type": "EP",
     "label": {
@@ -32523,6 +33640,25 @@
   {
     "from": "incident: Overig",
     "to": "Mail to Customer",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Overig",
+    "to": "Open",
     "arc_type": "EF",
     "label": {
       "each": [
@@ -32921,6 +34057,25 @@
   },
   {
     "from": "incident: Questions",
+    "to": "Status Change",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Questions",
     "to": "Urgency Change",
     "arc_type": "AS",
     "label": {
@@ -33151,6 +34306,29 @@
   },
   {
     "from": "incident: Questions",
+    "to": "request for information: No error - works as designed",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Questions",
     "to": "request for information: Operator error",
     "arc_type": "EF",
     "label": {
@@ -33243,6 +34421,160 @@
   },
   {
     "from": "incident: Referred",
+    "to": "Quality Indicator Fixed",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Referred",
+    "to": "Quality Indicator Set",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Referred",
+    "to": "incident: No error - works as designed",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Referred",
+    "to": "incident: Operator error",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Referred",
+    "to": "incident: Other",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Referred",
+    "to": "incident: Other",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Referred",
     "to": "incident: Software",
     "arc_type": "EF",
     "label": {
@@ -33250,6 +34582,10 @@
         {
           "type": "Simple",
           "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
@@ -33280,11 +34616,211 @@
         },
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "KM"
         },
         {
           "type": "Simple",
           "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Referred",
+    "to": "incident: Unknown",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Referred",
+    "to": "incident: Unknown",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Referred",
+    "to": "incident: User error",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Referred",
+    "to": "incident: User manual not used",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Referred",
+    "to": "request for information: Inquiry",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Referred",
+    "to": "request for information: Inquiry",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Referred",
+    "to": "request for information: Other",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Referred",
+    "to": "request for information: User manual not used",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         }
       ],
       "any": [],
@@ -33347,10 +34883,14 @@
   },
   {
     "from": "incident: Software",
-    "to": "Closed",
-    "arc_type": "EF",
+    "to": "Caused By CI",
+    "arc_type": "AS",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
         {
           "type": "Simple",
           "object_type": "KM"
@@ -33367,12 +34907,138 @@
   {
     "from": "incident: Software",
     "to": "Closed",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Software",
+    "to": "Mail to Customer",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Software",
+    "to": "Open",
     "arc_type": "EP",
     "label": {
       "each": [
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Software",
+    "to": "Operator Update",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Software",
+    "to": "Quality Indicator Fixed",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Software",
+    "to": "Reassignment",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Software",
+    "to": "Update",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         }
       ],
       "any": [],
@@ -33588,6 +35254,117 @@
   },
   {
     "from": "incident: Unknown",
+    "to": "Assignment",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Unknown",
+    "to": "Caused By CI",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Unknown",
+    "to": "Closed",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Unknown",
+    "to": "Reassignment",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Unknown",
+    "to": "Update",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Unknown",
     "to": "incident: No error - works as designed",
     "arc_type": "AS",
     "label": {
@@ -33688,10 +35465,60 @@
   },
   {
     "from": "incident: User error",
-    "to": "Open",
+    "to": "Caused By CI",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: User error",
+    "to": "Closed",
     "arc_type": "EF",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: User error",
+    "to": "Open",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
         {
           "type": "Simple",
           "object_type": "KM"
@@ -33803,29 +35630,6 @@
   },
   {
     "from": "incident: User error",
-    "to": "incident: Unknown",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "ConfigurationItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "ServiceComponent"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "incident: User error",
     "to": "incident: User manual not used",
     "arc_type": "EF",
     "label": {
@@ -33860,6 +35664,94 @@
         {
           "type": "Simple",
           "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: User manual not used",
+    "to": "Caused By CI",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: User manual not used",
+    "to": "Closed",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: User manual not used",
+    "to": "Open",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: User manual not used",
+    "to": "Quality Indicator Fixed",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         }
       ],
       "any": [],
@@ -33891,17 +35783,36 @@
   },
   {
     "from": "incident: User manual not used",
-    "to": "incident: No error - works as designed",
-    "arc_type": "EF",
+    "to": "Reassignment",
+    "arc_type": "AS",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "ConfigurationItem"
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
-          "object_type": "ServiceComponent"
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: User manual not used",
+    "to": "Update",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         }
       ],
       "any": [],
@@ -33915,7 +35826,7 @@
   {
     "from": "incident: User manual not used",
     "to": "incident: No error - works as designed",
-    "arc_type": "EP",
+    "arc_type": "EF",
     "label": {
       "each": [
         {
@@ -34156,7 +36067,7 @@
   },
   {
     "from": "incident: User manual not used",
-    "to": "request for information: User manual not used",
+    "to": "request for information: Referred",
     "arc_type": "EP",
     "label": {
       "each": [
@@ -34213,6 +36124,33 @@
   },
   {
     "from": "incident: nan",
+    "to": "External Vendor Assignment",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Interaction"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: nan",
     "to": "External Vendor Reassignment",
     "arc_type": "EP",
     "label": {
@@ -34252,9 +36190,17 @@
   {
     "from": "incident: nan",
     "to": "Pending vendor",
-    "arc_type": "EF",
+    "arc_type": "EP",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Interaction"
+        },
         {
           "type": "Simple",
           "object_type": "KM"
@@ -34327,6 +36273,33 @@
   },
   {
     "from": "incident: nan",
+    "to": "Status Change",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Interaction"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: nan",
     "to": "Update from customer",
     "arc_type": "EP",
     "label": {
@@ -34372,6 +36345,25 @@
         {
           "type": "Simple",
           "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: nan",
+    "to": "Vendor Reference",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         }
       ],
       "any": [],
@@ -36048,8 +38040,8 @@
   },
   {
     "from": "request for change: Other",
-    "to": "request for information: User error",
-    "arc_type": "EF",
+    "to": "request for information: Referred",
+    "arc_type": "EP",
     "label": {
       "each": [
         {
@@ -36071,8 +38063,8 @@
   },
   {
     "from": "request for change: Other",
-    "to": "request for information: User manual not used",
-    "arc_type": "EP",
+    "to": "request for information: User error",
+    "arc_type": "EF",
     "label": {
       "each": [
         {
@@ -37013,6 +39005,33 @@
   },
   {
     "from": "request for change: Software",
+    "to": "request for information: Software",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for change: Software",
     "to": "request for information: Unknown",
     "arc_type": "EF",
     "label": {
@@ -37024,6 +39043,121 @@
         {
           "type": "Simple",
           "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for change: Software",
+    "to": "request for information: User error",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Data",
+    "to": "Assignment",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Data",
+    "to": "Assignment",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Interaction"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Data",
+    "to": "Caused By CI",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Data",
+    "to": "Caused By CI",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Interaction"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
         }
       ],
       "any": [],
@@ -37081,6 +39215,52 @@
         {
           "type": "Simple",
           "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Data",
+    "to": "Open",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Interaction"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Data",
+    "to": "Status Change",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "KM"
         }
       ],
       "any": [],
@@ -37222,6 +39402,33 @@
     "from": "request for information: Data",
     "to": "request for information: Other",
     "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Data",
+    "to": "request for information: Other",
+    "arc_type": "EP",
     "label": {
       "each": [
         {
@@ -37389,10 +39596,14 @@
   },
   {
     "from": "request for information: Inquiry",
-    "to": "Reopen",
-    "arc_type": "AS",
+    "to": "Assignment",
+    "arc_type": "EP",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
         {
           "type": "Simple",
           "object_type": "KM"
@@ -37408,8 +39619,100 @@
   },
   {
     "from": "request for information: Inquiry",
-    "to": "Status Change",
+    "to": "Caused By CI",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "Closed",
     "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "Communication with customer",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "Operator Update",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "Reopen",
+    "arc_type": "AS",
     "label": {
       "each": [
         {
@@ -37433,7 +39736,103 @@
       "each": [
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "Update",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "incident: No error - works as designed",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "incident: Operator error",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "incident: Operator error",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
         }
       ],
       "any": [],
@@ -37469,6 +39868,106 @@
   },
   {
     "from": "request for information: Inquiry",
+    "to": "incident: Other",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "incident: Other",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "incident: Referred",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "incident: Referred",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
     "to": "incident: Software",
     "arc_type": "EF",
     "label": {
@@ -37476,6 +39975,10 @@
         {
           "type": "Simple",
           "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
@@ -37502,6 +40005,102 @@
         },
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "incident: Unknown",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "incident: User error",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "incident: User error",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "request for information: Other",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "ServiceComponent"
         }
       ],
@@ -37516,12 +40115,35 @@
   {
     "from": "request for information: Inquiry",
     "to": "request for information: Software",
-    "arc_type": "EF",
+    "arc_type": "EP",
     "label": {
       "each": [
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "request for information: User manual not used",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         }
       ],
       "any": [],
@@ -37994,6 +40616,33 @@
   },
   {
     "from": "request for information: MOBIELPORTAAL?SERVER (PRODUCT)",
+    "to": "request for information: Referred",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: MOBIELPORTAAL?SERVER (PRODUCT)",
     "to": "request for information: Unknown",
     "arc_type": "EF",
     "label": {
@@ -38023,6 +40672,33 @@
     "from": "request for information: MOBIELPORTAAL?SERVER (PRODUCT)",
     "to": "request for information: Unknown",
     "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: MOBIELPORTAAL?SERVER (PRODUCT)",
+    "to": "request for information: User error",
+    "arc_type": "EF",
     "label": {
       "each": [
         {
@@ -38090,6 +40766,52 @@
         {
           "type": "Simple",
           "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: No error - works as designed",
+    "to": "Caused By CI",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: No error - works as designed",
+    "to": "Closed",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
         }
       ],
       "any": [],
@@ -38103,28 +40825,13 @@
   {
     "from": "request for information: No error - works as designed",
     "to": "Open",
-    "arc_type": "EF",
+    "arc_type": "EP",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "KM"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "request for information: No error - works as designed",
-    "to": "Status Change",
-    "arc_type": "EP",
-    "label": {
-      "each": [
+          "object_type": "Incident"
+        },
         {
           "type": "Simple",
           "object_type": "KM"
@@ -38213,13 +40920,105 @@
   },
   {
     "from": "request for information: Operator error",
-    "to": "Closed",
+    "to": "Caused By CI",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Operator error",
+    "to": "Open",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Operator error",
+    "to": "Operator Update",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Operator error",
+    "to": "Reassignment",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Operator error",
+    "to": "request for information: No error - works as designed",
     "arc_type": "EF",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "KM"
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
         }
       ],
       "any": [],
@@ -38313,13 +41112,97 @@
   },
   {
     "from": "request for information: Other",
+    "to": "Caused By CI",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Other",
     "to": "Open",
     "arc_type": "EP",
     "label": {
       "each": [
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Other",
+    "to": "Operator Update",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Other",
+    "to": "Reassignment",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Other",
+    "to": "Update",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         }
       ],
       "any": [],
@@ -38596,6 +41479,25 @@
   },
   {
     "from": "request for information: Overig",
+    "to": "Status Change",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Overig",
     "to": "Urgency Change",
     "arc_type": "AS",
     "label": {
@@ -38773,6 +41675,124 @@
   },
   {
     "from": "request for information: Questions",
+    "to": "Communication with customer",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "External Vendor Reassignment",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "Incident reproduction",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "OO Response",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "Problem Workaround",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "Referred",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
     "to": "incident: Data",
     "arc_type": "AS",
     "label": {
@@ -38780,6 +41800,10 @@
         {
           "type": "Simple",
           "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         }
       ],
       "any": [],
@@ -38796,6 +41820,10 @@
     "arc_type": "EF",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
         {
           "type": "Simple",
           "object_type": "ServiceComponent"
@@ -38815,6 +41843,33 @@
     "arc_type": "EP",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "incident: Hardware",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
         {
           "type": "Simple",
           "object_type": "ServiceComponent"
@@ -38834,6 +41889,245 @@
     "arc_type": "EP",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "incident: No error - works as designed",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "incident: Operator error",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "incident: Referred",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "incident: User error",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "incident: User error",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "incident: User manual not used",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "incident: User manual not used",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "request for information: Inquiry",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "request for information: Inquiry",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
         {
           "type": "Simple",
           "object_type": "ServiceComponent"
@@ -38859,6 +42153,10 @@
         },
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "KM"
         },
         {
@@ -38876,7 +42174,7 @@
   },
   {
     "from": "request for information: Questions",
-    "to": "request for information: User error",
+    "to": "request for information: Other",
     "arc_type": "EF",
     "label": {
       "each": [
@@ -38886,7 +42184,123 @@
         },
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "KM"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "request for information: Other",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "request for information: Referred",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "request for information: Unknown",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
+    "to": "request for information: Unknown",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
@@ -38913,11 +42327,205 @@
         },
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "KM"
         },
         {
           "type": "Simple",
           "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "Callback Request",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "Caused By CI",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "Contact Change",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "External Vendor Reassignment",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "External update",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "Mail to Customer",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "Open",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "Reassignment",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "Status Change",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "Vendor Reference Change",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         }
       ],
       "any": [],
@@ -38937,6 +42545,222 @@
         {
           "type": "Simple",
           "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "incident: No error - works as designed",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "incident: Operator error",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "incident: Referred",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "incident: Referred",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "incident: Unknown",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "incident: User error",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "request for information: Data",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "request for information: Inquiry",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
@@ -38963,6 +42787,37 @@
         },
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "request for information: No error - works as designed",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "ServiceComponent"
         }
       ],
@@ -38983,6 +42838,41 @@
         {
           "type": "Simple",
           "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "request for information: Other",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
         },
         {
           "type": "Simple",
@@ -39009,6 +42899,41 @@
         },
         {
           "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "request for information: Questions",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "KM"
         },
         {
@@ -39027,12 +42952,16 @@
   {
     "from": "request for information: Referred",
     "to": "request for information: Software",
-    "arc_type": "EF",
+    "arc_type": "AS",
     "label": {
       "each": [
         {
           "type": "Simple",
           "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
@@ -39060,6 +42989,37 @@
         {
           "type": "Simple",
           "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "request for information: User manual not used",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
@@ -39229,6 +43189,29 @@
   },
   {
     "from": "request for information: SOFTWARE",
+    "to": "request for information: Referred",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: SOFTWARE",
     "to": "request for information: Unknown",
     "arc_type": "EF",
     "label": {
@@ -39252,30 +43235,7 @@
   },
   {
     "from": "request for information: SOFTWARE",
-    "to": "request for information: User manual not used",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "ConfigurationItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "ServiceComponent"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "request for information: Software",
-    "to": "request for information: Other",
+    "to": "request for information: User error",
     "arc_type": "EF",
     "label": {
       "each": [
@@ -39285,7 +43245,388 @@
         },
         {
           "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "Analysis/Research",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "Communication with customer",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "Communication with vendor",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "Description Update",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "Impact Change",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "OO Response",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "Reassignment",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
           "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "Reopen",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "Resolved",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "Update from customer",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "Urgency Change",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "complaint: Kwaliteit van de output",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "incident: Data",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "incident: Other",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "incident: Software",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "incident: nan",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "request for information: Data",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "request for information: No error - works as designed",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "request for information: No error - works as designed",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
@@ -39303,12 +43644,16 @@
   {
     "from": "request for information: Software",
     "to": "request for information: Other",
-    "arc_type": "EP",
+    "arc_type": "AS",
     "label": {
       "each": [
         {
           "type": "Simple",
           "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
@@ -39353,12 +43698,58 @@
   {
     "from": "request for information: Software",
     "to": "request for information: Questions",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "request for information: Questions",
     "arc_type": "EP",
     "label": {
       "each": [
         {
           "type": "Simple",
           "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "request for information: Referred",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
@@ -39401,11 +43792,107 @@
     ]
   },
   {
+    "from": "request for information: Software",
+    "to": "request for information: User error",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Unknown",
+    "to": "Assignment",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Unknown",
+    "to": "Caused By CI",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
     "from": "request for information: Unknown",
     "to": "Closed",
     "arc_type": "EF",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Unknown",
+    "to": "Operator Update",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
         {
           "type": "Simple",
           "object_type": "KM"
@@ -39448,6 +43935,33 @@
   },
   {
     "from": "request for information: Unknown",
+    "to": "request for information: Other",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Unknown",
     "to": "request for information: Software",
     "arc_type": "EP",
     "label": {
@@ -39499,6 +44013,29 @@
   {
     "from": "request for information: Unknown",
     "to": "request for information: User manual not used",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Unknown",
+    "to": "request for information: User manual not used",
     "arc_type": "EP",
     "label": {
       "each": [
@@ -39521,10 +44058,83 @@
   },
   {
     "from": "request for information: User error",
-    "to": "request for information: Data",
+    "to": "Reassignment",
     "arc_type": "AS",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User error",
+    "to": "incident: Other",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User error",
+    "to": "incident: Software",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User error",
+    "to": "incident: Software",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
         {
           "type": "Simple",
           "object_type": "ServiceComponent"
@@ -39567,8 +44177,62 @@
   },
   {
     "from": "request for information: User error",
-    "to": "request for information: Questions",
+    "to": "request for information: Other",
     "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User error",
+    "to": "request for information: Other",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User error",
+    "to": "request for information: Other",
+    "arc_type": "EP",
     "label": {
       "each": [
         {
@@ -39675,17 +44339,17 @@
   },
   {
     "from": "request for information: User error",
-    "to": "request for information: Unknown",
-    "arc_type": "AS",
+    "to": "request for information: Software",
+    "arc_type": "EP",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "ConfigurationItem"
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
-          "object_type": "KM"
+          "object_type": "ServiceComponent"
         }
       ],
       "any": [],
@@ -39720,11 +44384,642 @@
     ]
   },
   {
+    "from": "request for information: User error",
+    "to": "request for information: User manual not used",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User error",
+    "to": "request for information: User manual not used",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Affected CI Change",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Analysis/Research",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Callback Request",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Communication with customer",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Communication with vendor",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Contact Change",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Description Update",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Dial-in",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "External Vendor Assignment",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "External update",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Impact Change",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Incident reproduction",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Mail to Customer",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Notify By Change",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Notify By Change",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Pending vendor",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Problem Closure",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Problem Workaround",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Quality Indicator",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Quality Indicator Set",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Referred",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Reopen",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Resolved",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Service Change",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Update",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Update from customer",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Urgency Change",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Vendor Reference",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Vendor Reference Change",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "complaint: Overig",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "complaint: Overig",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
     "from": "request for information: User manual not used",
     "to": "incident: Hardware",
     "arc_type": "EF",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
         {
           "type": "Simple",
           "object_type": "ServiceComponent"
@@ -39740,13 +45035,205 @@
   },
   {
     "from": "request for information: User manual not used",
-    "to": "request for information: Referred",
+    "to": "incident: Other",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "incident: Software",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "incident: User error",
     "arc_type": "EF",
     "label": {
       "each": [
         {
           "type": "Simple",
           "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "incident: nan",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "request for change: Software",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "request for information: Data",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "request for information: Inquiry",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "request for information: No error - works as designed",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        },
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "request for information: Other",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
@@ -39768,12 +45255,16 @@
   {
     "from": "request for information: User manual not used",
     "to": "request for information: Referred",
-    "arc_type": "EP",
+    "arc_type": "EF",
     "label": {
       "each": [
         {
           "type": "Simple",
           "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
@@ -39801,6 +45292,10 @@
         {
           "type": "Simple",
           "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         },
         {
           "type": "Simple",
@@ -40044,6 +45539,25 @@
   {
     "from": "service request: Inquiry",
     "to": "Impact Change",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "service request: Inquiry",
+    "to": "Open",
     "arc_type": "EF",
     "label": {
       "each": [
@@ -40880,6 +46394,25 @@
   },
   {
     "from": "service request: Unknown",
+    "to": "Open",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "service request: Unknown",
     "to": "Pending vendor",
     "arc_type": "EP",
     "label": {
@@ -41571,6 +47104,29 @@
   {
     "from": "service request: User manual not used",
     "to": "request for information: Referred",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "ConfigurationItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "service request: User manual not used",
+    "to": "request for information: Referred",
     "arc_type": "EP",
     "label": {
       "each": [
@@ -41666,6 +47222,25 @@
   },
   {
     "from": "service request: nan",
+    "to": "Closed",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "service request: nan",
     "to": "Standard Change Type 144",
     "arc_type": "EP",
     "label": {
@@ -41715,25 +47290,6 @@
         {
           "type": "Simple",
           "object_type": "ServiceComponent"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "service request: nan",
-    "to": "Update",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "KM"
         }
       ],
       "any": [],

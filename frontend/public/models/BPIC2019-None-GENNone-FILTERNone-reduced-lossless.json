@@ -3128,6 +3128,60 @@
     ]
   },
   {
+    "from": "Record Service Entry Sheet",
+    "to": "Record Service Entry Sheet",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Record Service Entry Sheet",
+    "to": "Record Service Entry Sheet",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
     "from": "Record Subsequent Invoice",
     "to": "Cancel Invoice Receipt",
     "arc_type": "EF",

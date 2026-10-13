@@ -666,6 +666,25 @@
   },
   {
     "from": "W_Call after offers",
+    "to": "W_Call after offers",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Workflow"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "W_Call after offers",
     "to": "W_Complete application",
     "arc_type": "EP",
     "label": {
@@ -915,6 +934,25 @@
     "from": "W_Validate application",
     "to": "W_Call after offers",
     "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Workflow"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "W_Validate application",
+    "to": "W_Validate application",
+    "arc_type": "EF",
     "label": {
       "each": [
         {

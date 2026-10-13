@@ -38103,6 +38103,25 @@
   },
   {
     "from": "complaint: Overig",
+    "to": "Dial-in",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Overig",
     "to": "Standard Change Type 148",
     "arc_type": "EP",
     "label": {
@@ -38301,6 +38320,25 @@
         {
           "type": "Simple",
           "object_type": "ConfigurationItem"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "complaint: Overig",
+    "to": "request for change: Software",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         }
       ],
       "any": [],
@@ -40876,6 +40914,44 @@
         {
           "type": "Simple",
           "object_type": "ServiceComponent"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Referred",
+    "to": "Dial-in",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "incident: Referred",
+    "to": "request for change: Software",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         }
       ],
       "any": [],
@@ -45668,6 +45744,44 @@
     ]
   },
   {
+    "from": "request for information: Inquiry",
+    "to": "Dial-in",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Inquiry",
+    "to": "request for change: Software",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
     "from": "request for information: MOBIELPORTAAL?SERVER (PRODUCT)",
     "to": "Communication with customer",
     "arc_type": "EF",
@@ -46930,6 +47044,25 @@
   },
   {
     "from": "request for information: Questions",
+    "to": "Dial-in",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
     "to": "Open",
     "arc_type": "AS",
     "label": {
@@ -47006,6 +47139,25 @@
   },
   {
     "from": "request for information: Questions",
+    "to": "request for change: Software",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Questions",
     "to": "request for information: Inquiry",
     "arc_type": "EF",
     "label": {
@@ -47070,6 +47222,44 @@
         {
           "type": "Simple",
           "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "Dial-in",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Referred",
+    "to": "request for change: Software",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         }
       ],
       "any": [],
@@ -47564,6 +47754,82 @@
     ]
   },
   {
+    "from": "request for information: Software",
+    "to": "Dial-in",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: Software",
+    "to": "request for change: Software",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User error",
+    "to": "Dial-in",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User error",
+    "to": "request for change: Software",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
     "from": "request for information: User manual not used",
     "to": "Description Update",
     "arc_type": "AS",
@@ -47572,6 +47838,44 @@
         {
           "type": "Simple",
           "object_type": "KM"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "Dial-in",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "request for information: User manual not used",
+    "to": "request for change: Software",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Incident"
         }
       ],
       "any": [],

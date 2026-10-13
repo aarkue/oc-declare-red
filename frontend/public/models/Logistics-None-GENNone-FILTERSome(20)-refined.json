@@ -1,5 +1,127 @@
 [
   {
+    "from": "Place in Stock",
+    "to": "Weigh",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Container"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Forklift"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Book Vehicles",
+    "to": "Depart",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Transport Document"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vehicle"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Load Truck",
+    "to": "Collect Goods",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Handling Unit"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Order Empty Containers",
+    "to": "Load Truck",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Container"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Reschedule Container",
+    "to": "Book Vehicles",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vehicle"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Pick Up Empty Container",
+    "to": "Load Truck",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Container"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
     "from": "Create Transport Document",
     "to": "Register Customer Order",
     "arc_type": "EP",
@@ -8,6 +130,132 @@
         {
           "type": "Simple",
           "object_type": "Customer Order"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Pick Up Empty Container",
+    "to": "Order Empty Containers",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Container"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Load Truck",
+    "to": "Drive to Terminal",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Container"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Truck"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Place in Stock",
+    "to": "Bring to Loading Bay",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Container"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Order Empty Containers",
+    "to": "Depart",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Container"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Transport Document"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Drive to Terminal",
+    "to": "Load Truck",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Container"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Truck"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Load to Vehicle",
+    "to": "Book Vehicles",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vehicle"
         }
       ],
       "any": [],
@@ -42,38 +290,11 @@
     ]
   },
   {
-    "from": "Place in Stock",
-    "to": "Weigh",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Container"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Forklift"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Order Empty Containers",
-    "to": "Depart",
+    "from": "Book Vehicles",
+    "to": "Order Empty Containers",
     "arc_type": "EF",
     "label": {
       "each": [
-        {
-          "type": "Simple",
-          "object_type": "Container"
-        },
         {
           "type": "Simple",
           "object_type": "Transport Document"
@@ -88,11 +309,15 @@
     ]
   },
   {
-    "from": "Load to Vehicle",
+    "from": "Depart",
     "to": "Book Vehicles",
     "arc_type": "EP",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Transport Document"
+        },
         {
           "type": "Simple",
           "object_type": "Vehicle"
@@ -107,37 +332,62 @@
     ]
   },
   {
-    "from": "Bring to Loading Bay",
-    "to": "Load to Vehicle",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Container"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Forklift"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Load Truck",
-    "to": "Collect Goods",
+    "from": "Depart",
+    "to": "Order Empty Containers",
     "arc_type": "EP",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "Handling Unit"
+          "object_type": "Container"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "Transport Document"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Depart",
+    "to": "Order Empty Containers",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Transport Document"
+        }
+      ],
+      "any": [
+        {
+          "type": "Simple",
+          "object_type": "Container"
+        }
+      ],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Bring to Loading Bay",
+    "to": "Place in Stock",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Container"
         }
       ],
       "any": [],
@@ -149,14 +399,14 @@
     ]
   },
   {
-    "from": "Place in Stock",
-    "to": "Bring to Loading Bay",
-    "arc_type": "EF",
+    "from": "Order Empty Containers",
+    "to": "Book Vehicles",
+    "arc_type": "EP",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "Container"
+          "object_type": "Transport Document"
         }
       ],
       "any": [],
@@ -169,10 +419,18 @@
   },
   {
     "from": "Reschedule Container",
-    "to": "Book Vehicles",
-    "arc_type": "EP",
+    "to": "Depart",
+    "arc_type": "EF",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "Container"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Transport Document"
+        },
         {
           "type": "Simple",
           "object_type": "Vehicle"
@@ -206,71 +464,14 @@
     ]
   },
   {
-    "from": "Order Empty Containers",
-    "to": "Load Truck",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Container"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Drive to Terminal",
-    "to": "Weigh",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Container"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Reschedule Container",
-    "to": "Bring to Loading Bay",
+    "from": "Depart",
+    "to": "Load to Vehicle",
     "arc_type": "EP",
     "label": {
       "each": [
         {
           "type": "Simple",
           "object_type": "Container"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Book Vehicles",
-    "to": "Depart",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Transport Document"
         },
         {
           "type": "Simple",
@@ -286,28 +487,9 @@
     ]
   },
   {
-    "from": "Book Vehicles",
-    "to": "Order Empty Containers",
+    "from": "Drive to Terminal",
+    "to": "Weigh",
     "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Transport Document"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Load Truck",
-    "to": "Pick Up Empty Container",
-    "arc_type": "EP",
     "label": {
       "each": [
         {
@@ -343,106 +525,14 @@
     ]
   },
   {
-    "from": "Depart",
-    "to": "Book Vehicles",
+    "from": "Book Vehicles",
+    "to": "Create Transport Document",
     "arc_type": "EP",
     "label": {
       "each": [
         {
           "type": "Simple",
           "object_type": "Transport Document"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vehicle"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Reschedule Container",
-    "to": "Depart",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Container"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Transport Document"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vehicle"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Pick Up Empty Container",
-    "to": "Load Truck",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Container"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Load Truck",
-    "to": "Drive to Terminal",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Container"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Truck"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Register Customer Order",
-    "to": "Create Transport Document",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Customer Order"
         }
       ],
       "any": [],
@@ -455,48 +545,6 @@
   },
   {
     "from": "Bring to Loading Bay",
-    "to": "Place in Stock",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Container"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Drive to Terminal",
-    "to": "Load Truck",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Container"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Truck"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Reschedule Container",
     "to": "Load to Vehicle",
     "arc_type": "EF",
     "label": {
@@ -507,114 +555,7 @@
         },
         {
           "type": "Simple",
-          "object_type": "Vehicle"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Reschedule Container",
-    "to": "Order Empty Containers",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Container"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Transport Document"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Weigh",
-    "to": "Drive to Terminal",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Container"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Load to Vehicle",
-    "to": "Depart",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Container"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vehicle"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Pick Up Empty Container",
-    "to": "Order Empty Containers",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Container"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Depart",
-    "to": "Load to Vehicle",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Container"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vehicle"
+          "object_type": "Forklift"
         }
       ],
       "any": [],
@@ -649,14 +590,98 @@
     ]
   },
   {
-    "from": "Book Vehicles",
+    "from": "Load Truck",
+    "to": "Pick Up Empty Container",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Container"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Load to Vehicle",
+    "to": "Depart",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Container"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vehicle"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Weigh",
+    "to": "Drive to Terminal",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Container"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Reschedule Container",
+    "to": "Order Empty Containers",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Container"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Transport Document"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Register Customer Order",
     "to": "Create Transport Document",
-    "arc_type": "EP",
+    "arc_type": "EF",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "Transport Document"
+          "object_type": "Customer Order"
         }
       ],
       "any": [],
@@ -668,14 +693,14 @@
     ]
   },
   {
-    "from": "Order Empty Containers",
-    "to": "Book Vehicles",
+    "from": "Reschedule Container",
+    "to": "Bring to Loading Bay",
     "arc_type": "EP",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "Transport Document"
+          "object_type": "Container"
         }
       ],
       "any": [],
@@ -687,46 +712,21 @@
     ]
   },
   {
-    "from": "Depart",
-    "to": "Order Empty Containers",
-    "arc_type": "EP",
+    "from": "Reschedule Container",
+    "to": "Load to Vehicle",
+    "arc_type": "EF",
     "label": {
       "each": [
         {
           "type": "Simple",
           "object_type": "Container"
-        }
-      ],
-      "any": [
+        },
         {
           "type": "Simple",
-          "object_type": "Transport Document"
+          "object_type": "Vehicle"
         }
       ],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Depart",
-    "to": "Order Empty Containers",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Transport Document"
-        }
-      ],
-      "any": [
-        {
-          "type": "Simple",
-          "object_type": "Container"
-        }
-      ],
+      "any": [],
       "all": []
     },
     "counts": [

@@ -1,64 +1,148 @@
 [
   {
-    "from": "SRM: Transfer Failed (E.Sys.)",
-    "to": "Vendor creates invoice",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Transfer Failed (E.Sys.)",
-    "to": "Record Service Entry Sheet",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Incomplete",
-    "to": "SRM: Deleted",
+    "from": "SRM: Awaiting Approval",
+    "to": "Record Goods Receipt",
     "arc_type": "EF",
     "label": {
       "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Final Invoice Indicator",
+    "to": "Delete Purchase Order Item",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Final Invoice Indicator",
+    "to": "Delete Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: In Transfer to Execution Syst.",
+    "to": "Update Order Confirmation",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: In Transfer to Execution Syst.",
+    "to": "Update Order Confirmation",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Record Subsequent Invoice",
+    "to": "Record Goods Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Complete",
+    "to": "SRM: Created",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
         {
           "type": "Simple",
           "object_type": "Resource"
@@ -77,88 +161,7 @@
     ]
   },
   {
-    "from": "Set Payment Block",
-    "to": "Vendor creates invoice",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Block Purchase Order Item",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Delete Purchase Order Item",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Quantity",
+    "from": "SRM: Document Completed",
     "to": "Record Goods Receipt",
     "arc_type": "EF",
     "label": {
@@ -216,8 +219,1780 @@
     ]
   },
   {
+    "from": "SRM: Created",
+    "to": "SRM: Document Completed",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
+    "to": "Update Order Confirmation",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
+    "to": "Update Order Confirmation",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Awaiting Approval",
+    "to": "Clear Invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Vendor creates debit memo",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
     "from": "SRM: Ordered",
     "to": "Record Invoice Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Cancel Invoice Receipt",
+    "to": "Vendor creates debit memo",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Rejection Indicator",
+    "to": "Record Service Entry Sheet",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Rejection Indicator",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Record Subsequent Invoice",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Change was Transmitted",
+    "to": "Vendor creates invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: In Transfer to Execution Syst.",
+    "to": "Record Subsequent Invoice",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "Cancel Subsequent Invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "Remove Payment Block",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "Update Order Confirmation",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "Update Order Confirmation",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Ordered",
+    "to": "SRM: Held",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Deleted",
+    "to": "SRM: Complete",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
+    "to": "SRM: Document Completed",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transfer Failed (E.Sys.)",
+    "to": "Record Service Entry Sheet",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Document Completed",
+    "to": "SRM: Created",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change payment term",
+    "to": "Cancel Goods Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Reactivate Purchase Order Item",
+    "to": "Record Invoice Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Deleted",
+    "to": "Change Price",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "Delete Purchase Order Item",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transfer Failed (E.Sys.)",
+    "to": "SRM: Document Completed",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Currency",
+    "to": "Vendor creates debit memo",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Deleted",
+    "to": "SRM: Awaiting Approval",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transaction Completed",
+    "to": "SRM: Complete",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
+    "to": "SRM: Complete",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transfer Failed (E.Sys.)",
+    "to": "Change Price",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Clear Invoice",
+    "to": "Record Invoice Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: In Transfer to Execution Syst.",
+    "to": "Cancel Invoice Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Quantity",
+    "to": "Record Invoice Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Storage Location",
+    "to": "Record Goods Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Release Purchase Order",
+    "to": "Change Approval for Purchase Order",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
+    "to": "SRM: In Transfer to Execution Syst.",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
+    "to": "Record Service Entry Sheet",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Block Purchase Order Item",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Created",
+    "to": "SRM: In Transfer to Execution Syst.",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Update Order Confirmation",
+    "to": "Record Invoice Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Created",
+    "to": "SRM: Awaiting Approval",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transaction Completed",
+    "to": "SRM: Awaiting Approval",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Document Completed",
+    "to": "Update Order Confirmation",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Document Completed",
+    "to": "Update Order Confirmation",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Update Order Confirmation",
+    "to": "Record Goods Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Remove Payment Block",
+    "to": "Record Invoice Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Complete",
+    "to": "Record Goods Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Complete",
+    "to": "Record Invoice Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Remove Payment Block",
+    "to": "Clear Invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Complete",
+    "to": "SRM: Incomplete",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transaction Completed",
+    "to": "Delete Purchase Order Item",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Deleted",
+    "to": "SRM: Change was Transmitted",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transaction Completed",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Quantity",
+    "to": "Record Goods Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Change was Transmitted",
+    "to": "Clear Invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Deleted",
+    "to": "SRM: Document Completed",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Rejection Indicator",
+    "to": "Record Goods Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Created",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Document Completed",
+    "to": "Clear Invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Document Completed",
+    "to": "SRM: Incomplete",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
+    "to": "Delete Purchase Order Item",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transaction Completed",
+    "to": "SRM: Document Completed",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change payment term",
+    "to": "Reactivate Purchase Order Item",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change payment term",
+    "to": "Reactivate Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
+    "to": "SRM: Change was Transmitted",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Awaiting Approval",
+    "to": "Cancel Invoice Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Currency",
+    "to": "Clear Invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Cancel Invoice Receipt",
+    "to": "Record Invoice Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Price",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Created",
+    "to": "Update Order Confirmation",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Created",
+    "to": "Update Order Confirmation",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Release Purchase Requisition",
+    "to": "Create Purchase Order Item",
     "arc_type": "EF",
     "label": {
       "each": [
@@ -270,145 +2045,14 @@
     ]
   },
   {
-    "from": "Record Service Entry Sheet",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Complete",
-    "to": "Clear Invoice",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Release Purchase Order",
-    "to": "Change Approval for Purchase Order",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Release Purchase Requisition",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Incomplete",
-    "to": "Vendor creates debit memo",
-    "arc_type": "AS",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Transaction Completed",
+    "from": "SRM: Held",
     "to": "SRM: Deleted",
-    "arc_type": "AS",
+    "arc_type": "EF",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
+          "object_type": "Resource"
         },
         {
           "type": "Simple",
@@ -425,738 +2069,8 @@
   },
   {
     "from": "SRM: Transfer Failed (E.Sys.)",
-    "to": "Change Price",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "SRM: Complete",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Create Purchase Requisition Item",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Storage Location",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Final Invoice Indicator",
-    "to": "Change Quantity",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Transfer Failed (E.Sys.)",
-    "to": "SRM: Complete",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change payment term",
-    "to": "Record Goods Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: In Transfer to Execution Syst.",
-    "to": "Record Goods Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Update Order Confirmation",
-    "to": "Record Invoice Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change payment term",
-    "to": "Change Storage Location",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Price",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Currency",
-    "to": "Vendor creates invoice",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Transfer Failed (E.Sys.)",
-    "to": "SRM: In Transfer to Execution Syst.",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "Cancel Subsequent Invoice",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Rejection Indicator",
-    "to": "Change Quantity",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Rejection Indicator",
-    "to": "Change Quantity",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Vendor creates invoice",
-    "to": "Record Invoice Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Change was Transmitted",
-    "to": "Vendor creates invoice",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Final Invoice Indicator",
-    "to": "SRM: In Transfer to Execution Syst.",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Rejection Indicator",
-    "to": "Cancel Invoice Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Change was Transmitted",
-    "to": "Update Order Confirmation",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Rejection Indicator",
-    "to": "Vendor creates debit memo",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Currency",
-    "to": "Change Approval for Purchase Order",
-    "arc_type": "AS",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Deleted",
-    "to": "SRM: Held",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Update Order Confirmation",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Awaiting Approval",
-    "to": "Record Goods Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Receive Order Confirmation",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Receive Order Confirmation",
-    "to": "Vendor creates invoice",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Clear Invoice",
-    "to": "Record Invoice Receipt",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "SRM: Ordered",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Ordered",
     "to": "Clear Invoice",
-    "arc_type": "EF",
+    "arc_type": "EP",
     "label": {
       "each": [
         {
@@ -1208,9 +2122,9 @@
     ]
   },
   {
-    "from": "Create Purchase Order Item",
-    "to": "Record Goods Receipt",
-    "arc_type": "EF",
+    "from": "Reactivate Purchase Order Item",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
     "label": {
       "each": [
         {
@@ -1224,6 +2138,25 @@
         {
           "type": "Simple",
           "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Document Completed",
+    "to": "Cancel Invoice Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
         }
       ],
       "any": [],
@@ -1262,7 +2195,91 @@
     ]
   },
   {
-    "from": "SRM: Document Completed",
+    "from": "Change Rejection Indicator",
+    "to": "Change Price",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Rejection Indicator",
+    "to": "Change Price",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Create Purchase Order Item",
+    "to": "Vendor creates invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
+    "to": "Remove Payment Block",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: In Transfer to Execution Syst.",
     "to": "Record Goods Receipt",
     "arc_type": "EF",
     "label": {
@@ -1289,7 +2306,422 @@
     ]
   },
   {
+    "from": "SRM: Complete",
+    "to": "Cancel Invoice Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
     "from": "Change Currency",
+    "to": "Change Price",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Final Invoice Indicator",
+    "to": "SRM: Document Completed",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Final Invoice Indicator",
+    "to": "SRM: Ordered",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Receive Order Confirmation",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Currency",
+    "to": "Record Goods Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Record Invoice Receipt",
+    "to": "Clear Invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Complete",
+    "to": "Update Order Confirmation",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Complete",
+    "to": "Update Order Confirmation",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transfer Failed (E.Sys.)",
+    "to": "Vendor creates invoice",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Final Invoice Indicator",
+    "to": "SRM: Change was Transmitted",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "Vendor creates debit memo",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
+    "to": "Change Price",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Currency",
+    "to": "Vendor creates invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "Change Price",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "SRM: Awaiting Approval",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Set Payment Block",
     "to": "Create Purchase Order Item",
     "arc_type": "EP",
     "label": {
@@ -1317,8 +2749,27 @@
   },
   {
     "from": "SRM: Deleted",
-    "to": "SRM: In Transfer to Execution Syst.",
+    "to": "SRM: Incomplete",
     "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "SRM: Held",
+    "arc_type": "AS",
     "label": {
       "each": [
         {
@@ -1374,36 +2825,9 @@
     ]
   },
   {
-    "from": "Remove Payment Block",
-    "to": "Record Invoice Receipt",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Created",
-    "to": "SRM: Change was Transmitted",
-    "arc_type": "EF",
+    "from": "Change Rejection Indicator",
+    "to": "Delete Purchase Order Item",
+    "arc_type": "AS",
     "label": {
       "each": [
         {
@@ -1432,119 +2856,7 @@
     ]
   },
   {
-    "from": "SRM: Transaction Completed",
-    "to": "SRM: Ordered",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "SRM: Awaiting Approval",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Created",
-    "to": "SRM: In Transfer to Execution Syst.",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Cancel Subsequent Invoice",
-    "to": "Clear Invoice",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Incomplete",
+    "from": "Create Purchase Requisition Item",
     "to": "Create Purchase Order Item",
     "arc_type": "EF",
     "label": {
@@ -1571,36 +2883,9 @@
     ]
   },
   {
-    "from": "SRM: Transaction Completed",
-    "to": "SRM: Change was Transmitted",
+    "from": "SRM: Deleted",
+    "to": "SRM: Held",
     "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Created",
-    "to": "SRM: Incomplete",
-    "arc_type": "AS",
     "label": {
       "each": [
         {
@@ -1617,161 +2902,7 @@
     ]
   },
   {
-    "from": "SRM: Transfer Failed (E.Sys.)",
-    "to": "SRM: Ordered",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "Create Purchase Requisition Item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Cancel Subsequent Invoice",
-    "to": "Vendor creates invoice",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Transfer Failed (E.Sys.)",
-    "to": "SRM: Change was Transmitted",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Incomplete",
-    "to": "SRM: Complete",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Complete",
-    "to": "Record Goods Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Rejection Indicator",
+    "from": "Update Order Confirmation",
     "to": "Clear Invoice",
     "arc_type": "EF",
     "label": {
@@ -1798,8 +2929,120 @@
     ]
   },
   {
-    "from": "SRM: Held",
-    "to": "Cancel Invoice Receipt",
+    "from": "Receive Order Confirmation",
+    "to": "Vendor creates invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Update Order Confirmation",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Update Order Confirmation",
+    "to": "Vendor creates invoice",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: In Transfer to Execution Syst.",
+    "to": "SRM: Created",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Change was Transmitted",
+    "to": "SRM: Incomplete",
     "arc_type": "EP",
     "label": {
       "each": [
@@ -1817,14 +3060,22 @@
     ]
   },
   {
-    "from": "SRM: Created",
-    "to": "Cancel Invoice Receipt",
-    "arc_type": "EP",
+    "from": "Receive Order Confirmation",
+    "to": "Record Goods Receipt",
+    "arc_type": "EF",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "Resource"
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
         }
       ],
       "any": [],
@@ -1837,26 +3088,7 @@
   },
   {
     "from": "SRM: Incomplete",
-    "to": "Change Price",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Created",
-    "to": "SRM: Awaiting Approval",
+    "to": "Record Service Entry Sheet",
     "arc_type": "EF",
     "label": {
       "each": [
@@ -1866,14 +3098,6 @@
         },
         {
           "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
           "object_type": "Vendor"
         }
       ],
@@ -1886,8 +3110,8 @@
     ]
   },
   {
-    "from": "SRM: Deleted",
-    "to": "SRM: Change was Transmitted",
+    "from": "SRM: Incomplete",
+    "to": "SRM: Created",
     "arc_type": "EP",
     "label": {
       "each": [
@@ -1917,36 +3141,9 @@
     ]
   },
   {
-    "from": "Change Final Invoice Indicator",
-    "to": "SRM: Change was Transmitted",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "Change Quantity",
-    "arc_type": "EF",
+    "from": "SRM: In Transfer to Execution Syst.",
+    "to": "SRM: Incomplete",
+    "arc_type": "AS",
     "label": {
       "each": [
         {
@@ -1990,171 +3187,13 @@
     ]
   },
   {
-    "from": "Change Quantity",
-    "to": "Record Invoice Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Block Purchase Order Item",
-    "to": "Cancel Goods Receipt",
-    "arc_type": "AS",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Record Invoice Receipt",
-    "to": "Vendor creates invoice",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Record Subsequent Invoice",
-    "to": "Clear Invoice",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Transaction Completed",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Record Subsequent Invoice",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
     "from": "Change Currency",
-    "to": "Clear Invoice",
+    "to": "Cancel Invoice Receipt",
     "arc_type": "EF",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
           "object_type": "Vendor"
         }
       ],
@@ -2167,36 +3206,9 @@
     ]
   },
   {
-    "from": "Record Invoice Receipt",
-    "to": "Record Goods Receipt",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Deleted",
-    "to": "SRM: Complete",
-    "arc_type": "EP",
+    "from": "SRM: Held",
+    "to": "SRM: Incomplete",
+    "arc_type": "AS",
     "label": {
       "each": [
         {
@@ -2226,6 +3238,37 @@
   },
   {
     "from": "SRM: Deleted",
+    "to": "SRM: In Transfer to Execution Syst.",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transfer Failed (E.Sys.)",
     "to": "SRM: Ordered",
     "arc_type": "EP",
     "label": {
@@ -2240,228 +3283,6 @@
         },
         {
           "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: In Transfer to Execution Syst.",
-    "to": "Cancel Invoice Receipt",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Rejection Indicator",
-    "to": "Change Price",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Rejection Indicator",
-    "to": "Change Price",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Reactivate Purchase Order Item",
-    "to": "Record Invoice Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Change was Transmitted",
-    "to": "SRM: Created",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Incomplete",
-    "to": "Record Subsequent Invoice",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Incomplete",
-    "to": "Record Subsequent Invoice",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: In Transfer to Execution Syst.",
-    "to": "Update Order Confirmation",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: In Transfer to Execution Syst.",
-    "to": "Update Order Confirmation",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Update Order Confirmation",
-    "to": "Record Goods Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
           "object_type": "Vendor"
         }
       ],
@@ -2475,216 +3296,24 @@
   },
   {
     "from": "SRM: Transaction Completed",
-    "to": "SRM: Document Completed",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Awaiting Approval",
-    "to": "Record Invoice Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Currency",
-    "to": "Record Goods Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: In Transfer to Execution Syst.",
-    "to": "Record Subsequent Invoice",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "SRM: Deleted",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Cancel Subsequent Invoice",
-    "to": "Vendor creates debit memo",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Record Invoice Receipt",
-    "to": "Clear Invoice",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Cancel Invoice Receipt",
-    "to": "Record Invoice Receipt",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Incomplete",
-    "to": "Cancel Invoice Receipt",
+    "to": "SRM: In Transfer to Execution Syst.",
     "arc_type": "AS",
     "label": {
       "each": [
         {
           "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
           "object_type": "Vendor"
         }
       ],
@@ -2697,138 +3326,8 @@
     ]
   },
   {
-    "from": "SRM: Incomplete",
-    "to": "Cancel Invoice Receipt",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Set Payment Block",
+    "from": "Record Subsequent Invoice",
     "to": "Record Invoice Receipt",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Vendor creates debit memo",
-    "to": "Clear Invoice",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Rejection Indicator",
-    "to": "Create Purchase Requisition Item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Rejection Indicator",
-    "to": "Create Purchase Requisition Item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Rejection Indicator",
-    "to": "Create Purchase Requisition Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Record Goods Receipt",
-    "to": "Create Purchase Order Item",
     "arc_type": "EP",
     "label": {
       "each": [
@@ -2855,8 +3354,54 @@
   },
   {
     "from": "SRM: Created",
-    "to": "SRM: Ordered",
+    "to": "SRM: Incomplete",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Ordered",
+    "to": "Clear Invoice",
     "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Release Purchase Requisition",
+    "to": "Create Purchase Requisition Item",
+    "arc_type": "EP",
     "label": {
       "each": [
         {
@@ -2885,8 +3430,187 @@
     ]
   },
   {
-    "from": "SRM: Document Completed",
-    "to": "Clear Invoice",
+    "from": "Change payment term",
+    "to": "Change Storage Location",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Final Invoice Indicator",
+    "to": "SRM: Awaiting Approval",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Final Invoice Indicator",
+    "to": "Cancel Goods Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Final Invoice Indicator",
+    "to": "Cancel Goods Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "Create Purchase Requisition Item",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "Record Subsequent Invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "Record Subsequent Invoice",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "Change Quantity",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
+    "to": "Create Purchase Requisition Item",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Created",
+    "to": "SRM: Change was Transmitted",
     "arc_type": "EF",
     "label": {
       "each": [
@@ -2897,6 +3621,10 @@
         {
           "type": "Simple",
           "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
         },
         {
           "type": "Simple",
@@ -2931,806 +3659,7 @@
     ]
   },
   {
-    "from": "SRM: Ordered",
-    "to": "SRM: Created",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Complete",
-    "to": "Cancel Invoice Receipt",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Rejection Indicator",
-    "to": "Record Invoice Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Transfer Failed (E.Sys.)",
-    "to": "SRM: Awaiting Approval",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Transfer Failed (E.Sys.)",
-    "to": "Clear Invoice",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Complete",
-    "to": "SRM: Incomplete",
-    "arc_type": "AS",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change payment term",
-    "to": "Reactivate Purchase Order Item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change payment term",
-    "to": "Reactivate Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Cancel Goods Receipt",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Document Completed",
-    "to": "Record Invoice Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
     "from": "SRM: Held",
-    "to": "SRM: Incomplete",
-    "arc_type": "AS",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Incomplete",
-    "to": "Remove Payment Block",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Change was Transmitted",
-    "to": "SRM: Incomplete",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Deleted",
-    "to": "Change Price",
-    "arc_type": "AS",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Incomplete",
-    "to": "SRM: Awaiting Approval",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Transfer Failed (E.Sys.)",
-    "to": "Record Invoice Receipt",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: In Transfer to Execution Syst.",
-    "to": "SRM: Created",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "Record Subsequent Invoice",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "Record Subsequent Invoice",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Price",
-    "to": "Clear Invoice",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Change was Transmitted",
-    "to": "Record Goods Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Final Invoice Indicator",
-    "to": "SRM: Deleted",
-    "arc_type": "AS",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Complete",
-    "to": "Record Invoice Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Incomplete",
-    "to": "SRM: In Transfer to Execution Syst.",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Document Completed",
-    "to": "Cancel Invoice Receipt",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Transfer Failed (E.Sys.)",
-    "to": "SRM: Deleted",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "SRM: Change was Transmitted",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Final Invoice Indicator",
-    "to": "SRM: Ordered",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Vendor creates invoice",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Awaiting Approval",
-    "to": "Cancel Invoice Receipt",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Transaction Completed",
-    "to": "Delete Purchase Order Item",
-    "arc_type": "AS",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: In Transfer to Execution Syst.",
-    "to": "SRM: Incomplete",
-    "arc_type": "AS",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "SRM: Document Completed",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Incomplete",
     "to": "Cancel Subsequent Invoice",
     "arc_type": "EF",
     "label": {
@@ -3749,272 +3678,14 @@
     ]
   },
   {
-    "from": "SRM: Ordered",
-    "to": "SRM: Incomplete",
+    "from": "SRM: Change was Transmitted",
+    "to": "SRM: Held",
     "arc_type": "EP",
     "label": {
       "each": [
         {
           "type": "Simple",
           "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Final Invoice Indicator",
-    "to": "SRM: Document Completed",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "SRM: Created",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Rejection Indicator",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Rejection Indicator",
-    "to": "Record Goods Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Incomplete",
-    "to": "Create Purchase Requisition Item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Final Invoice Indicator",
-    "to": "Cancel Goods Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Final Invoice Indicator",
-    "to": "Cancel Goods Receipt",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Remove Payment Block",
-    "to": "Clear Invoice",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Incomplete",
-    "to": "SRM: Change was Transmitted",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
         }
       ],
       "any": [],
@@ -4053,33 +3724,22 @@
     ]
   },
   {
-    "from": "SRM: Awaiting Approval",
-    "to": "Update Order Confirmation",
+    "from": "Cancel Subsequent Invoice",
+    "to": "Clear Invoice",
     "arc_type": "EF",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Awaiting Approval",
-    "to": "Update Order Confirmation",
-    "arc_type": "EP",
-    "label": {
-      "each": [
+          "object_type": "PO"
+        },
         {
           "type": "Simple",
-          "object_type": "Resource"
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
         }
       ],
       "any": [],
@@ -4091,66 +3751,9 @@
     ]
   },
   {
-    "from": "SRM: Document Completed",
+    "from": "SRM: Ordered",
     "to": "Update Order Confirmation",
     "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Document Completed",
-    "to": "Update Order Confirmation",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "Update Order Confirmation",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "Update Order Confirmation",
-    "arc_type": "EP",
     "label": {
       "each": [
         {
@@ -4168,17 +3771,13 @@
   },
   {
     "from": "SRM: Incomplete",
-    "to": "SRM: Document Completed",
+    "to": "SRM: Deleted",
     "arc_type": "EF",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
+          "object_type": "Resource"
         },
         {
           "type": "Simple",
@@ -4194,8 +3793,8 @@
     ]
   },
   {
-    "from": "Change payment term",
-    "to": "Create Purchase Order Item",
+    "from": "Change Final Invoice Indicator",
+    "to": "SRM: In Transfer to Execution Syst.",
     "arc_type": "EP",
     "label": {
       "each": [
@@ -4221,33 +3820,22 @@
     ]
   },
   {
-    "from": "SRM: Created",
-    "to": "Update Order Confirmation",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Created",
-    "to": "Update Order Confirmation",
+    "from": "SRM: Transfer Failed (E.Sys.)",
+    "to": "SRM: Change was Transmitted",
     "arc_type": "EP",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "Resource"
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
         }
       ],
       "any": [],
@@ -4259,8 +3847,66 @@
     ]
   },
   {
-    "from": "Record Subsequent Invoice",
-    "to": "Record Goods Receipt",
+    "from": "SRM: Awaiting Approval",
+    "to": "SRM: Created",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transaction Completed",
+    "to": "SRM: Change was Transmitted",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transfer Failed (E.Sys.)",
+    "to": "SRM: In Transfer to Execution Syst.",
     "arc_type": "EP",
     "label": {
       "each": [
@@ -4305,7 +3951,337 @@
     ]
   },
   {
+    "from": "SRM: Incomplete",
+    "to": "Cancel Invoice Receipt",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "Cancel Invoice Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Record Invoice Receipt",
+    "to": "Vendor creates invoice",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Rejection Indicator",
+    "to": "Vendor creates debit memo",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
+    "to": "SRM: Awaiting Approval",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transfer Failed (E.Sys.)",
+    "to": "SRM: Complete",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Price",
+    "to": "Clear Invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Awaiting Approval",
+    "to": "SRM: Incomplete",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
     "from": "Set Payment Block",
+    "to": "Vendor creates invoice",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Cancel Goods Receipt",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Cancel Subsequent Invoice",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
+    "to": "Record Subsequent Invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
+    "to": "Record Subsequent Invoice",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: In Transfer to Execution Syst.",
+    "to": "Record Invoice Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Record Goods Receipt",
     "to": "Create Purchase Order Item",
     "arc_type": "EP",
     "label": {
@@ -4333,33 +4309,6 @@
   },
   {
     "from": "Vendor creates debit memo",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Change was Transmitted",
     "to": "Clear Invoice",
     "arc_type": "EF",
     "label": {
@@ -4386,7 +4335,438 @@
     ]
   },
   {
-    "from": "SRM: Complete",
+    "from": "SRM: Ordered",
+    "to": "Record Goods Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Change was Transmitted",
+    "to": "Update Order Confirmation",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Vendor creates invoice",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Created",
+    "to": "Cancel Invoice Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Document Completed",
+    "to": "Record Invoice Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Rejection Indicator",
+    "to": "Change Quantity",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Rejection Indicator",
+    "to": "Change Quantity",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Storage Location",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "SRM: Complete",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Rejection Indicator",
+    "to": "Record Invoice Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "SRM: In Transfer to Execution Syst.",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Created",
+    "to": "SRM: Complete",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transaction Completed",
+    "to": "SRM: Deleted",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Set Payment Block",
+    "to": "Record Invoice Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Vendor creates invoice",
+    "to": "Record Invoice Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Record Service Entry Sheet",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Block Purchase Order Item",
+    "to": "Cancel Goods Receipt",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Change was Transmitted",
     "to": "SRM: Created",
     "arc_type": "EP",
     "label": {
@@ -4418,90 +4798,63 @@
   },
   {
     "from": "SRM: Change was Transmitted",
-    "to": "SRM: Held",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Transaction Completed",
-    "to": "SRM: In Transfer to Execution Syst.",
-    "arc_type": "AS",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Cancel Subsequent Invoice",
-    "to": "Record Invoice Receipt",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "Record Service Entry Sheet",
+    "to": "Record Goods Receipt",
     "arc_type": "EF",
     "label": {
       "each": [
         {
           "type": "Simple",
           "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Final Invoice Indicator",
+    "to": "Change Quantity",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Rejection Indicator",
+    "to": "Vendor creates invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
         },
         {
           "type": "Simple",
@@ -4518,27 +4871,8 @@
   },
   {
     "from": "Change payment term",
-    "to": "Cancel Goods Receipt",
+    "to": "Record Goods Receipt",
     "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Cancel Subsequent Invoice",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EP",
     "label": {
       "each": [
         {
@@ -4564,281 +4898,8 @@
   },
   {
     "from": "SRM: Incomplete",
-    "to": "Record Service Entry Sheet",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Ordered",
-    "to": "Update Order Confirmation",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Awaiting Approval",
-    "to": "SRM: Incomplete",
-    "arc_type": "AS",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Release Purchase Requisition",
-    "to": "Create Purchase Requisition Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Reactivate Purchase Order Item",
-    "to": "Record Goods Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Update Order Confirmation",
-    "to": "Clear Invoice",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Ordered",
-    "to": "Record Goods Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Deleted",
     "to": "Create Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "Change Price",
     "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Transaction Completed",
-    "to": "SRM: Awaiting Approval",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Storage Location",
-    "to": "Record Goods Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Cancel Invoice Receipt",
-    "to": "Vendor creates debit memo",
-    "arc_type": "EP",
     "label": {
       "each": [
         {
@@ -4864,7 +4925,7 @@
   },
   {
     "from": "Create Purchase Order Item",
-    "to": "Vendor creates invoice",
+    "to": "Record Goods Receipt",
     "arc_type": "EF",
     "label": {
       "each": [
@@ -4879,90 +4940,6 @@
         {
           "type": "Simple",
           "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Document Completed",
-    "to": "SRM: Incomplete",
-    "arc_type": "AS",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Change was Transmitted",
-    "to": "Record Invoice Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Complete",
-    "to": "Update Order Confirmation",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Complete",
-    "to": "Update Order Confirmation",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
         }
       ],
       "any": [],
@@ -4975,7 +4952,7 @@
   },
   {
     "from": "SRM: Transaction Completed",
-    "to": "SRM: Complete",
+    "to": "SRM: Ordered",
     "arc_type": "EP",
     "label": {
       "each": [
@@ -4986,94 +4963,6 @@
         {
           "type": "Simple",
           "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Final Invoice Indicator",
-    "to": "Delete Purchase Order Item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Final Invoice Indicator",
-    "to": "Delete Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Rejection Indicator",
-    "to": "Record Service Entry Sheet",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Created",
-    "to": "SRM: Complete",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
         },
         {
           "type": "Simple",
@@ -5090,282 +4979,6 @@
   },
   {
     "from": "Change Rejection Indicator",
-    "to": "Vendor creates invoice",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Deleted",
-    "to": "SRM: Awaiting Approval",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Final Invoice Indicator",
-    "to": "SRM: Awaiting Approval",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Incomplete",
-    "to": "Delete Purchase Order Item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "Delete Purchase Order Item",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Deleted",
-    "to": "Update Order Confirmation",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Awaiting Approval",
-    "to": "SRM: Created",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Currency",
-    "to": "Vendor creates debit memo",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Ordered",
-    "to": "SRM: Held",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Held",
-    "to": "Remove Payment Block",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Record Subsequent Invoice",
-    "to": "Record Invoice Receipt",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Currency",
-    "to": "Cancel Invoice Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Awaiting Approval",
     "to": "Clear Invoice",
     "arc_type": "EF",
     "label": {
@@ -5392,7 +5005,53 @@
     ]
   },
   {
-    "from": "SRM: Incomplete",
+    "from": "Record Invoice Receipt",
+    "to": "Record Goods Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Receive Order Confirmation",
+    "to": "Cancel Subsequent Invoice",
+    "arc_type": "AS",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
     "to": "Change Quantity",
     "arc_type": "EF",
     "label": {
@@ -5411,26 +5070,14 @@
     ]
   },
   {
-    "from": "SRM: Document Completed",
-    "to": "SRM: Created",
-    "arc_type": "EP",
+    "from": "Change Currency",
+    "to": "Change Approval for Purchase Order",
+    "arc_type": "AS",
     "label": {
       "each": [
         {
           "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
           "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
         }
       ],
       "any": [],
@@ -5442,40 +5089,9 @@
     ]
   },
   {
-    "from": "SRM: Deleted",
-    "to": "SRM: Document Completed",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Created",
+    "from": "Change Currency",
     "to": "Create Purchase Order Item",
-    "arc_type": "EF",
+    "arc_type": "EP",
     "label": {
       "each": [
         {
@@ -5531,8 +5147,46 @@
     ]
   },
   {
-    "from": "SRM: Incomplete",
-    "to": "SRM: Held",
+    "from": "SRM: Awaiting Approval",
+    "to": "Update Order Confirmation",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Awaiting Approval",
+    "to": "Update Order Confirmation",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Final Invoice Indicator",
+    "to": "SRM: Deleted",
     "arc_type": "AS",
     "label": {
       "each": [
@@ -5546,7 +5200,184 @@
         },
         {
           "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Deleted",
+    "to": "SRM: Ordered",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
           "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transfer Failed (E.Sys.)",
+    "to": "SRM: Deleted",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Reactivate Purchase Order Item",
+    "to": "Record Goods Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Quantity",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Ordered",
+    "to": "SRM: Created",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Ordered",
+    "to": "SRM: Incomplete",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Record Subsequent Invoice",
+    "to": "Clear Invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
         },
         {
           "type": "Simple",
@@ -5593,8 +5424,35 @@
     ]
   },
   {
-    "from": "Receive Order Confirmation",
-    "to": "Record Goods Receipt",
+    "from": "Cancel Subsequent Invoice",
+    "to": "Vendor creates debit memo",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Change was Transmitted",
+    "to": "Record Invoice Receipt",
     "arc_type": "EF",
     "label": {
       "each": [
@@ -5620,8 +5478,138 @@
     ]
   },
   {
-    "from": "SRM: Created",
-    "to": "SRM: Document Completed",
+    "from": "Change Rejection Indicator",
+    "to": "Create Purchase Requisition Item",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Rejection Indicator",
+    "to": "Create Purchase Requisition Item",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Rejection Indicator",
+    "to": "Create Purchase Requisition Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Delete Purchase Order Item",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
+    "to": "Cancel Invoice Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transfer Failed (E.Sys.)",
+    "to": "SRM: Awaiting Approval",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Incomplete",
+    "to": "SRM: Change was Transmitted",
     "arc_type": "EF",
     "label": {
       "each": [
@@ -5652,7 +5640,126 @@
   },
   {
     "from": "SRM: Transfer Failed (E.Sys.)",
-    "to": "SRM: Document Completed",
+    "to": "Record Invoice Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Cancel Subsequent Invoice",
+    "to": "Record Invoice Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Deleted",
+    "to": "Update Order Confirmation",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Resource"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change Rejection Indicator",
+    "to": "Cancel Invoice Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Cancel Subsequent Invoice",
+    "to": "Vendor creates invoice",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Deleted",
+    "to": "Create Purchase Order Item",
     "arc_type": "EP",
     "label": {
       "each": [
@@ -5679,6 +5786,141 @@
   },
   {
     "from": "SRM: Incomplete",
+    "to": "SRM: Document Completed",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "Change payment term",
+    "to": "Create Purchase Order Item",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Complete",
+    "to": "Clear Invoice",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Transfer Failed (E.Sys.)",
+    "to": "Record Goods Receipt",
+    "arc_type": "EP",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Awaiting Approval",
+    "to": "Record Invoice Receipt",
+    "arc_type": "EF",
+    "label": {
+      "each": [
+        {
+          "type": "Simple",
+          "object_type": "PO"
+        },
+        {
+          "type": "Simple",
+          "object_type": "POItem"
+        },
+        {
+          "type": "Simple",
+          "object_type": "Vendor"
+        }
+      ],
+      "any": [],
+      "all": []
+    },
+    "counts": [
+      1,
+      null
+    ]
+  },
+  {
+    "from": "SRM: Held",
     "to": "SRM: Created",
     "arc_type": "EP",
     "label": {
@@ -5709,9 +5951,9 @@
     ]
   },
   {
-    "from": "Change Currency",
-    "to": "Change Price",
-    "arc_type": "AS",
+    "from": "SRM: Created",
+    "to": "SRM: Ordered",
+    "arc_type": "EF",
     "label": {
       "each": [
         {
@@ -5741,7 +5983,7 @@
   },
   {
     "from": "SRM: Held",
-    "to": "SRM: In Transfer to Execution Syst.",
+    "to": "SRM: Ordered",
     "arc_type": "EF",
     "label": {
       "each": [
@@ -5756,248 +5998,6 @@
         {
           "type": "Simple",
           "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Transfer Failed (E.Sys.)",
-    "to": "Record Goods Receipt",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Rejection Indicator",
-    "to": "Delete Purchase Order Item",
-    "arc_type": "AS",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Change Quantity",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Receive Order Confirmation",
-    "to": "Cancel Subsequent Invoice",
-    "arc_type": "AS",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Reactivate Purchase Order Item",
-    "to": "Create Purchase Order Item",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Deleted",
-    "to": "SRM: Incomplete",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "Update Order Confirmation",
-    "to": "Vendor creates invoice",
-    "arc_type": "AS",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
-        },
-        {
-          "type": "Simple",
-          "object_type": "Vendor"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Incomplete",
-    "to": "Update Order Confirmation",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: Incomplete",
-    "to": "Update Order Confirmation",
-    "arc_type": "EP",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "Resource"
-        }
-      ],
-      "any": [],
-      "all": []
-    },
-    "counts": [
-      1,
-      null
-    ]
-  },
-  {
-    "from": "SRM: In Transfer to Execution Syst.",
-    "to": "Record Invoice Receipt",
-    "arc_type": "EF",
-    "label": {
-      "each": [
-        {
-          "type": "Simple",
-          "object_type": "PO"
-        },
-        {
-          "type": "Simple",
-          "object_type": "POItem"
         },
         {
           "type": "Simple",

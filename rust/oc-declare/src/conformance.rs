@@ -1,3 +1,4 @@
+use std::collections::HashSet;
 use std::sync::atomic::AtomicU32;
 
 use chrono::{DateTime, FixedOffset};
@@ -18,6 +19,18 @@ pub fn get_evs_with_objs_perf<'a>(
         Box::new(EventOrSynthetic::get_all_syn_evs(linked_ocel, etype).into_iter())
     } else {
         match &objs[0] {
+            // ANY is a union: an event referencing several of the objects still counts once.
+            SetFilter::Any(items) if items.len() > 1 => {
+                let mut seen: HashSet<EventOrSynthetic> = HashSet::new();
+                Box::new(
+                    items
+                        .iter()
+                        .flat_map(|o| {
+                            EventOrSynthetic::get_all_of_et_for_ob(linked_ocel, etype, **o)
+                        })
+                        .filter(move |e| seen.insert(*e)),
+                )
+            }
             SetFilter::Any(items) => Box::new(
                 items
                     .iter()
@@ -250,4 +263,136 @@ pub fn oc_declare_conformance(ocel: &SlimLinkedOCEL, arc: &OCDeclareArc) -> f64 
         &arc.counts,
         ocel,
     )
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::model::{OCDeclareNode, ObjectTypeAssociation};
+    use process_mining::core::event_data::object_centric::{
+        OCELEvent, OCELObject, OCELRelationship, OCELType,
+    };
+    use process_mining::OCEL;
+
+    /// Events as `(id, type, day, objects)`, all objects of type `order`.
+    fn log(events: &[(&str, &str, u32, &[&str])], orders: &[&str]) -> SlimLinkedOCEL {
+        let ty = |n: &str| OCELType {
+            name: n.into(),
+            attributes: vec![],
+        };
+        SlimLinkedOCEL::from_ocel(OCEL {
+            event_types: vec![ty("place"), ty("ship"), ty("pay")],
+            object_types: vec![ty("order")],
+            events: events
+                .iter()
+                .map(|(id, et, day, obs)| OCELEvent {
+                    id: (*id).into(),
+                    event_type: (*et).into(),
+                    time: DateTime::parse_from_rfc3339(&format!("2024-01-0{day}T00:00:00Z"))
+                        .unwrap(),
+                    attributes: vec![],
+                    relationships: obs
+                        .iter()
+                        .map(|o| OCELRelationship {
+                            object_id: (*o).into(),
+                            qualifier: String::new(),
+                        })
+                        .collect(),
+                })
+                .collect(),
+            objects: orders
+                .iter()
+                .map(|o| OCELObject {
+                    id: (*o).into(),
+                    object_type: "order".into(),
+                    attributes: vec![],
+                    relationships: vec![],
+                })
+                .collect(),
+        })
+    }
+
+    /// `place` has no order object, a later `ship` involves one, and there is no `pay` event.
+    fn log_with_objectless_source() -> SlimLinkedOCEL {
+        log(
+            &[("e1", "place", 1, &[]), ("e2", "ship", 2, &["o1"])],
+            &["o1"],
+        )
+    }
+
+    fn place_ef(
+        to: &str,
+        label: OCDeclareArcLabel,
+        counts: (Option<usize>, Option<usize>),
+    ) -> OCDeclareArc {
+        OCDeclareArc {
+            from: OCDeclareNode::new("place"),
+            to: OCDeclareNode::new(to),
+            arc_type: OCDeclareArcType::EF,
+            label,
+            counts,
+        }
+    }
+
+    fn order() -> Vec<ObjectTypeAssociation> {
+        vec![ObjectTypeAssociation::new_simple("order")]
+    }
+
+    #[test]
+    fn empty_any_set_is_vacuous() {
+        let label = OCDeclareArcLabel {
+            any: order(),
+            ..Default::default()
+        };
+        let arc = place_ef("ship", label, (Some(1), None));
+        assert_eq!(
+            oc_declare_conformance(&log_with_objectless_source(), &arc),
+            1.0
+        );
+    }
+
+    #[test]
+    fn empty_all_set_is_vacuous() {
+        let label = OCDeclareArcLabel {
+            all: order(),
+            ..Default::default()
+        };
+        let arc = place_ef("ship", label, (Some(1), None));
+        assert_eq!(
+            oc_declare_conformance(&log_with_objectless_source(), &arc),
+            1.0
+        );
+    }
+
+    #[test]
+    fn empty_each_set_still_requires_a_target_event() {
+        let label = OCDeclareArcLabel {
+            each: order(),
+            ..Default::default()
+        };
+        let arc = place_ef("pay", label, (Some(1), None));
+        assert_eq!(
+            oc_declare_conformance(&log_with_objectless_source(), &arc),
+            0.0
+        );
+    }
+
+    #[test]
+    fn any_counts_a_target_event_sharing_several_objects_once() {
+        let l = log(
+            &[
+                ("e1", "place", 1, &["o1", "o2"]),
+                ("e2", "ship", 2, &["o1", "o2"]),
+            ],
+            &["o1", "o2"],
+        );
+        let label = OCDeclareArcLabel {
+            any: order(),
+            ..Default::default()
+        };
+        assert_eq!(
+            oc_declare_conformance(&l, &place_ef("ship", label, (Some(1), Some(1)))),
+            1.0
+        );
+    }
 }
